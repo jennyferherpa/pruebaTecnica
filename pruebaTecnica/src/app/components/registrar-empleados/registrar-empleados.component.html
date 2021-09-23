@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Crear empleado</h2>
+  </div>
+  <div class="col-md-12">
+    <form>
+      <div class="form-row">
+      <div class="form-group col-md-4">
+          <label for="inputEmail4">Primer nombre</label>
+          <input type="email" (input)="verData()" class="form-control" #primerName placeholder="Email">
+        </div><br>
+        <div class="form-group col-md-4">
+          <label for="inputPassword4">Segundo nombre</label>
+          <input type="password" class="form-control" #segundoName placeholder="Password">
+        </div><br>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Primer apellido</label>
+        <input type="email" (input)="verData()" class="form-control" #primerApellido placeholder="Primer apellido">
+      </div><br>
+      <div class="form-group col-md-4">
+        <label for="inputPassword4">Segundo apellido</label>
+        <input type="password" class="form-control" #segundoApellido placeholder="Segundo apellido">
+      </div><br>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Pais</label>
+          <select (input)="verData()" class="form-control" #pais placeholder="Pais">
+            <option value="0">Selecionar Pais</option>
+            <option *ngFor="let item of paises" value="{{item.id}}">{{item.pais}}</option>
+          </select>
+        </div><br>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Area</label>
+          <select class="form-control" #area placeholder="Area">
+            <option>Selecionar Area</option>
+            <option *ngFor="let item of areas" value="{{item.id}}">{{item.area}}</option>
+          </select>
+        </div><br>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Tipo Identificación</label>
+          <select class="form-control" #TId placeholder="Tipo de Identificacion">
+            <option>Selecionar Tipo ID</option>
+            <option *ngFor="let item of TipeID" value="{{item.id}}">{{item.tipo}}</option>
+          </select>
+        </div><br>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">No. Identificacion</label>
+          <input type="text" class="form-control" #ID placeholder="No. ID">
+        </div><br>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Fecha ingreso</label>
+          <input type="date" class="form-control" #fechaIngreso placeholder="Ingreso">
+        </div><br>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Email</label>
+          <input type="email" [(ngModel)]="email"  [ngModelOptions]="{standalone: true}"  class="form-control" readonly>
+        </div>
+      </div><br>
+      <button type="button" class="btn btn-primary" >Guardar</button>
+    </form>
+    <br>
+  </div>
+  </div>
+</div>
+<app-footer></app-footer>
