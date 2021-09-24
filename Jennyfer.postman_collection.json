@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "5d9770de-8678-47a7-bd56-5aa536f95014",
+		"name": "Jennyfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EditarEmpleado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"primer_apellido\" : \"Test2\",\r\n    \"segundo_apellido\" : \"Test2\",\r\n    \"primer_nombre\" : \"Test\",\r\n    \"otro_nombre\" : \"Test\",\r\n    \"pais\" : {\r\n        \"id\":1\r\n    },\r\n    \"identificacion\" : {\r\n        \"id\":1\r\n    },\r\n    \"nid\" : 1044558963,\r\n    \"email\" : \"test@test.com\",\r\n    \"fecha_ingreso\" : \"2021-01-01\",\r\n    \"area\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"estado\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/empleado/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"empleado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarEmpleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : null,\r\n    \"primer_apellido\" : \"Test2\",\r\n    \"segundo_apellido\" : \"Test2\",\r\n    \"primer_nombre\" : \"Test\",\r\n    \"otro_nombre\" : \"Test\",\r\n    \"pais\" : {\r\n        \"id\":1\r\n    },\r\n    \"identificacion\" : {\r\n        \"id\":1\r\n    },\r\n    \"nid\" : 1044558963,\r\n    \"email\" : \"test@test.com\",\r\n    \"fecha_ingreso\" : \"2021-01-01\",\r\n    \"area\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"estado\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/empleado/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"empleado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmpleados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/empleado",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"empleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaises",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/pais",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"pais"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAreas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/area",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTipoIdentificacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9004/api/tipoId",
+					"host": [
+						"localhost"
+					],
+					"port": "9004",
+					"path": [
+						"api",
+						"tipoId"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
